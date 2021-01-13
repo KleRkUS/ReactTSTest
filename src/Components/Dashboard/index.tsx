@@ -40,7 +40,10 @@ const Dashboard = () => {
     }
 
     const getPosts = () => {
-        const filteredPosts = applyFilter();
+        const filteredPosts = applyFilter(),
+              globalAmount = Math.ceil(filteredPosts.length/20);
+
+        if (globalAmount < page) setPage(0);
         return {
             posts: filteredPosts.slice(page*20, (page+1) * 20),
             globalAmount: Math.ceil(filteredPosts.length/20)
@@ -57,7 +60,7 @@ const Dashboard = () => {
         if (allPosts.length === 0 || allUsers.length === 0) {
             fetchData();
         }
-    }, []);
+    }, );
 
     if (!loaded) {
 
