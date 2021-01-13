@@ -46,7 +46,7 @@ const Dashboard = () => {
         if (globalAmount < page) setPage(0);
         return {
             posts: filteredPosts.slice(page*20, (page+1) * 20),
-            globalAmount: Math.ceil(filteredPosts.length/20)
+            globalAmount: globalAmount
         };
     }
 
