@@ -4,9 +4,9 @@ import {getData} from "../../Modules/Api";
 import {FetchData} from "../../Modules/Interfaces";
 import {MainSection, Spinner, SpinnerInner} from "../../Styles/Common";
 
-import Post from "./Componets/Post";
-import Pagination from "./Componets/Pagination";
-import {Filter} from "./Componets/Filter";
+import Post from "./Components/Post";
+import Pagination from "./Components/Pagination";
+import {Filter} from "./Components/Filter";
 
 const Dashboard = () => {
     const [allPosts, setPosts] = useState<Array<FetchData>>([]),
